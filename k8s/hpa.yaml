@@ -1,7 +1,7 @@
 apiVersion: autoscaling/v1
 kind: HorizontalPodAutoscaler
 metadata:
-  name: hpa
+  name: hpa-backend
   labels:
     app: app
 
@@ -12,5 +12,5 @@ spec:
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: backtend-deployment
+    name: backend-deployment
   targetCPUUtilizationPercentage: 30
